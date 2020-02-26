@@ -2,5 +2,12 @@ exports.config = {
     projectRoot: './src',
     projectName: 'angular-static-blog',
     outDir: './dist/static',
-    routes: {},
+    routes: {
+        '/blog/:slug': {
+            type: 'contentFolder',
+            slug: {
+                folder: './blog',
+            },
+        },
+    },
 };
