@@ -51,6 +51,8 @@ module.exports = {
         'no-underscore-dangle': 'off',
         // return awaitすることを許可する。
         'no-return-await': 'off',
+        // returnでの割り当てを許可する。(setup-jest.tsでLinterエラーが出たため。)
+        'no-return-assign': 'off',
         // ヨーダを許可する
         'yoda': 'off',
     },
