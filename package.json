@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "test:watch": "jest --watch",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "ng build && scully && scully serve"
   },
   "private": true,
   "dependencies": {
