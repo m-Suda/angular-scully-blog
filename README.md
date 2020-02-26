@@ -2,6 +2,12 @@
 
 Angular + Scullyで作る静的ブログアプリ
 
+## Create Markdown File
+
+```shell script
+$ ng g @scullyio/init:post --name="<File Name>" --target="blog"
+```
+
 ## Local build & serve
 
 ```shell script
