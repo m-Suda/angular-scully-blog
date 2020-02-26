@@ -55,5 +55,7 @@ module.exports = {
         'no-return-assign': 'off',
         // ヨーダを許可する
         'yoda': 'off',
+        // importにtsファイルも含める
+        'import/extensions': 'off',
     },
 };
