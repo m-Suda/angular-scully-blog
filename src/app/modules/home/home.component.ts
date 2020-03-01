@@ -14,8 +14,6 @@ export class HomeComponent implements OnInit {
     constructor(private articles: ArticlesService) {}
 
     ngOnInit(): void {
-        console.log('home ngOnInit');
-        // debug current pages
         this.links$.subscribe(links => {
             console.log(links);
         });
