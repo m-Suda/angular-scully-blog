@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends';
+import { ArticlesService } from '../../core/services/articles.service';
 
 @Component({
     selector: 'app-home',
@@ -9,11 +9,12 @@ import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends'
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-    links$: Observable<ScullyRouteExtendsType[]> = this.scully.available$;
+    links$: Observable<ScullyRouteExtendsType[]> = this.articles.links$;
 
-    constructor(private scully: ScullyRoutesService) {}
+    constructor(private articles: ArticlesService) {}
 
     ngOnInit(): void {
+        console.log('home ngOnInit');
         // debug current pages
         this.links$.subscribe(links => {
             console.log(links);

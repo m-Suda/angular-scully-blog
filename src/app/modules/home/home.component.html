@@ -1,9 +1,48 @@
-<p>home works!</p>
+<header class="home-header">
+    <mat-toolbar>
+        <span class="home-header_fill-remaining-space"></span>
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-toolbar>
+</header>
 
-<ul>
-    <li *ngFor="let page of links$ | async">
-        <a routerLink="{{page.route}}">
-            {{page.route}}
-        </a>
-    </li>
-</ul>
+<main class="home-main">
+
+    <section class="home-main__profile">
+        <div class="home-main__profile__icon"></div>
+        <div class="home-main__profile__contents">
+            <div class="home-main__profile__contents__name"></div>
+            <div class="home-main__profile__contents__self-introduction"></div>
+            <div class="home-main__profile__contents__sns">
+                <div class="home-main__profile__contents__icon"></div>
+                <div class="home-main__profile__contents__icon"></div>
+                <div class="home-main__profile__contents__icon"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-main__articles">
+        <ul>
+            <li *ngFor="let article of links$ | async" class="home-main__articles__item">
+                <div class="home-main__articles__item__thumbnail">
+                    <img src="{{article.thumbnail}}">
+                </div>
+                <div class="home-main__articles__item__contents">
+                    <div class="home-main__articles__item__contents__header">
+                        <div class="home-main__articles__item__contents__header__title">
+                            {{article.title}}
+                        </div>
+                        <div class="home-main__articles__item__contents__header__date">
+                            {{article.date | date:'yyyy-MM-dd'}}
+                        </div>
+                    </div>
+                    <div class="home-main__articles__item__contents__description">
+                        {{article.description}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+</main>

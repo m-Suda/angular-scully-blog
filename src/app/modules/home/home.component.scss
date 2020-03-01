@@ -1,0 +1,31 @@
+.home-header {
+  .home-header_fill-remaining-space {}
+}
+
+.home-main {
+
+  .home-main__profile {
+    .home-main__profile__icon {}
+    .home-main__profile__contents {
+      .home-main__profile__contents__name {}
+      .home-main__profile__contents__self-introduction {}
+      .home-main__profile__contents__sns {
+        .home-main__profile__contents__icon {}
+      }
+    }
+  }
+
+  .home-main__articles {
+    .home-main__articles__item {
+      .home-main__articles__item__thumbnail {}
+      .home-main__articles__item__contents {
+        .home-main__articles__item__contents__header {
+          .home-main__articles__item__contents__header__title {}
+          .home-main__articles__item__contents__header__date {}
+        }
+
+        .home-main__articles__item__contents__description {}
+      }
+    }
+  }
+}
