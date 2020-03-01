@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "angular-static-blog": {
+    "angular-scully-blog": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-static-blog",
+            "outputPath": "dist/angular-scully-blog",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-static-blog:build"
+            "browserTarget": "angular-scully-blog:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-static-blog:build:production"
+              "browserTarget": "angular-scully-blog:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-static-blog:build"
+            "browserTarget": "angular-scully-blog:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-static-blog:serve"
+            "devServerTarget": "angular-scully-blog:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-static-blog:serve:production"
+              "devServerTarget": "angular-scully-blog:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-static-blog"
+  "defaultProject": "angular-scully-blog"
 }

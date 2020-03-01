@@ -16,10 +16,10 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     });
 
-    it(`should have as title 'angular-static-blog'`, () => {
+    it(`should have as title 'angular-scully-blog'`, () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.componentInstance;
-        expect(app.title).toEqual('angular-static-blog');
+        expect(app.title).toEqual('angular-scully-blog');
     });
 
     it('should render title', () => {
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
         fixture.detectChanges();
         const compiled = fixture.nativeElement;
         expect(compiled.querySelector('.content span').textContent).toContain(
-            'angular-static-blog app is running!'
+            'angular-scully-blog app is running!'
         );
     });
 });
