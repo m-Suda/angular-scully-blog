@@ -1,0 +1,36 @@
+:host {
+  padding: 6rem 0 4.5rem;
+  display: flex;
+
+  .profile-icon {
+    padding-left: 6rem;
+    padding-right: 7rem;
+    .profile-icon__image {
+      object-fit: cover;
+      border-radius: 50%;
+      width: 9.25rem;
+      height: auto;
+    }
+  }
+
+  .profile-contents {
+    padding-top: 1.35rem;
+    .profile-contents__name {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .profile-contents__self-introduction {
+      color: var(--text-sub);
+      line-height: 1.7rem;
+    }
+    .profile-contents__sns {
+      margin-top: 1.5rem;
+      display: flex;
+      .profile-contents__sns__icon {
+        margin-right: 1.25rem;
+        width: 2rem;
+        height: auto;
+      }
+    }
+  }
+}
