@@ -1,0 +1,34 @@
+@import "article-list-base";
+
+:host {
+  @include list-item-base();
+  width: calc(100% / 3);
+  margin-bottom: 7vh;
+
+  .article-thumbnail {
+    .article-thumbnail__image {
+      width: 100%;
+    }
+  }
+
+  .article-contents {
+    margin-top: 10px;
+    .article-contents__header {
+      display: flex;
+      .article-contents__header__title {
+        font-weight: bold;
+        width: 75%;
+      }
+      .article-contents__header__date {
+        width: 25%;
+        padding-right: 5%;
+        text-align: right;
+        color: var(--text-sub);
+      }
+    }
+
+    .article-contents__description {
+      color: var(--text-sub);
+    }
+  }
+}

@@ -22,27 +22,8 @@
         </div>
     </section>
 
-    <section class="home-main__articles">
-        <ul>
-            <li *ngFor="let article of links$ | async" class="home-main__articles__item">
-                <div class="home-main__articles__item__thumbnail">
-                    <img src="{{article.thumbnail}}">
-                </div>
-                <div class="home-main__articles__item__contents">
-                    <div class="home-main__articles__item__contents__header">
-                        <div class="home-main__articles__item__contents__header__title">
-                            {{article.title}}
-                        </div>
-                        <div class="home-main__articles__item__contents__header__date">
-                            {{article.date | date:'yyyy-MM-dd'}}
-                        </div>
-                    </div>
-                    <div class="home-main__articles__item__contents__description">
-                        {{article.description}}
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </section>
+    <app-article-list>
+        <app-article-list-item *ngFor="let article of links$ | async" [article]="article"></app-article-list-item>
+    </app-article-list>
 
 </main>

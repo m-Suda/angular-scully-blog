@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends';
 import { ArticlesService } from '../../core/services/articles.service';
@@ -8,14 +8,8 @@ import { ArticlesService } from '../../core/services/articles.service';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
     links$: Observable<ScullyRouteExtendsType[]> = this.articles.links$;
 
     constructor(private articles: ArticlesService) {}
-
-    ngOnInit(): void {
-        this.links$.subscribe(links => {
-            console.log(links);
-        });
-    }
 }

@@ -1,0 +1,10 @@
+// リストを構成するのに必要なスタイル
+@mixin list-base() {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+@mixin list-item-base() {
+  flex: 0 1 31%;
+}

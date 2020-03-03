@@ -27,6 +27,14 @@ $angular-scully-blog-theme: mat-light-theme($angular-scully-blog-primary, $angul
 @include angular-material-theme($angular-scully-blog-theme);
 
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --text-main: #383838;
+  --text-sub: #676767;
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: var(--text-main);
+}
