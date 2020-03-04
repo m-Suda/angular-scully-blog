@@ -12,7 +12,10 @@
     <app-profile></app-profile>
 
     <app-article-list>
-        <app-article-list-item *ngFor="let article of links$ | async" [article]="article"></app-article-list-item>
+        <app-article-list-item *ngFor="let article of links$ | async"
+                               [article]="article"
+                                (click)="openArticle(article)">
+        </app-article-list-item>
     </app-article-list>
 
 </main>

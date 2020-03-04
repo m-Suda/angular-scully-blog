@@ -1,7 +1,18 @@
-<h3>ScullyIo content</h3>
-<hr>
+<header class="blog-header">
+    <mat-toolbar>
+        <span class="blog-header_fill-remaining-space"></span>
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-toolbar>
+</header>
 
-<!-- This is where Scully will inject the static HTML -->
-<scully-content></scully-content>
-<hr>
-<h4>End of content</h4>
+<main class="blog-main">
+
+    <div class="blog-main__heading">
+        <div class="blog-main__heading__date"></div>
+        <div class="blog-main__heading__category"></div>
+    </div>
+    <!-- This is where Scully will inject the static HTML -->
+    <scully-content></scully-content>
+</main>
