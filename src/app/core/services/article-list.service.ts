@@ -1,33 +1,29 @@
 import { Injectable } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { map, tap } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends';
 
 @Injectable({
     providedIn: 'root',
 })
 export class ArticleListService {
-    private readonly _links$: Observable<ScullyRouteExtendsType[]>;
-    private _routes: string[] = [];
+    private readonly articleList = new BehaviorSubject<ScullyRouteExtendsType[]>([]);
+    private readonly _articleList$ = this.articleList.asObservable();
     private _categories: string[] = [];
 
     constructor(private scully: ScullyRoutesService) {
-        this._links$ = this.scully.available$.pipe(
+        this._articleList$ = this.scully.available$.pipe(
             map(articles => this.filterOnlyArticlesToDisplay(articles)),
             tap<ScullyRouteExtendsType[]>(articles => {
-                this._routes = articles.map(({ route }) => route);
+                this.articleList.next(articles);
                 this._categories = articles.map(({ category }) => category);
             })
         );
     }
 
-    public get links$() {
-        return this._links$;
-    }
-
-    public get routes() {
-        return this._routes;
+    public get articleList$() {
+        return this._articleList$;
     }
 
     public get categories() {

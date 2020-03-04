@@ -9,7 +9,7 @@ import { ArticleListService } from '../../core/services/article-list.service';
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-    links$: Observable<ScullyRouteExtendsType[]> = this.articles.links$;
+    links$: Observable<ScullyRouteExtendsType[]> = this.articles.articleList$;
 
     constructor(private articles: ArticleListService) {}
 }
