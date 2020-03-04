@@ -17,7 +17,9 @@ export class ArticleListService {
             map(articles => this.filterOnlyArticlesToDisplay(articles)),
             tap<ScullyRouteExtendsType[]>(articles => {
                 this.articleList.next(articles);
-                this._categories = articles.map(({ category }) => category);
+                // @ts-ignore flat()で型エラーが起きる
+                const categories = articles.map(({ category }) => category).flat();
+                this._categories = [...new Set<string>(categories)];
             })
         );
     }
