@@ -7,10 +7,10 @@ import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends'
 @Injectable({
     providedIn: 'root',
 })
-export class ArticlesService {
+export class ArticleListService {
     private readonly _links$: Observable<ScullyRouteExtendsType[]>;
-    private _routes: string[];
-    private _categories: string[];
+    private _routes: string[] = [];
+    private _categories: string[] = [];
 
     constructor(private scully: ScullyRoutesService) {
         this._links$ = this.scully.available$.pipe(

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends';
-import { ArticlesService } from '../../core/services/articles.service';
+import { ArticleListService } from '../../core/services/article-list.service';
 
 @Component({
     selector: 'app-home',
@@ -11,5 +11,5 @@ import { ArticlesService } from '../../core/services/articles.service';
 export class HomeComponent {
     links$: Observable<ScullyRouteExtendsType[]> = this.articles.links$;
 
-    constructor(private articles: ArticlesService) {}
+    constructor(private articles: ArticleListService) {}
 }

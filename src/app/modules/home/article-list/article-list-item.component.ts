@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ScullyRouteExtendsType } from '../../../shared/types/scully-route-extends';
 
 @Component({
@@ -6,10 +6,8 @@ import { ScullyRouteExtendsType } from '../../../shared/types/scully-route-exten
     templateUrl: './article-list-item.component.html',
     styleUrls: ['./article-list-item.component.scss'],
 })
-export class ArticleListItemComponent implements OnInit {
+export class ArticleListItemComponent {
     @Input() article: ScullyRouteExtendsType;
 
     constructor() {}
-
-    ngOnInit(): void {}
 }

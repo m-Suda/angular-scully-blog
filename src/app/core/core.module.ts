@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArticlesService } from './services/articles.service';
+import { ArticleListService } from './services/article-list.service';
 
-const services = [ArticlesService];
+const services = [ArticleListService];
 
 @NgModule({
     declarations: [],
