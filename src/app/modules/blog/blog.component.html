@@ -1,18 +1,15 @@
 <header class="blog-header">
-    <mat-toolbar>
-        <span class="blog-header_fill-remaining-space"></span>
-        <button mat-icon-button>
-            <mat-icon>search</mat-icon>
-        </button>
-    </mat-toolbar>
+    <mat-toolbar></mat-toolbar>
 </header>
 
 <main class="blog-main">
 
     <div class="blog-main__heading">
-        <div class="blog-main__heading__date"></div>
-        <div class="blog-main__heading__category"></div>
+        <div class="blog-main__heading__date">{{article?.date | date:'yyyy-MM-dd'}}</div>
+        <div class="blog-main__heading__category">{{article?.category | arrayJoin:' / '}}</div>
     </div>
     <!-- This is where Scully will inject the static HTML -->
-    <scully-content></scully-content>
+    <div class="blog-main__article">
+        <scully-content></scully-content>
+    </div>
 </main>

@@ -14,4 +14,14 @@
 
 .blog-main {
   padding: 14vh 24.5% 0;
+
+  .blog-main__heading {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    color: var(--text-sub);
+  }
+
+  .blog-main__article {
+    margin-top: 1rem;
+  }
 }

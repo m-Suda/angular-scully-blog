@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { ArticleItemService } from '../../core/services/article-item.service';
 
 @Component({
     selector: 'app-blog',
@@ -7,8 +8,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     preserveWhitespaces: true,
     encapsulation: ViewEncapsulation.Emulated,
 })
-export class BlogComponent implements OnInit {
-    ngOnInit() {}
+export class BlogComponent {
+    public article = this.articleItem.article;
 
-    constructor() {}
+    constructor(private articleItem: ArticleItemService) {}
 }
