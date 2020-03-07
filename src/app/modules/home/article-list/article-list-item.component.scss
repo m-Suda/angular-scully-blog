@@ -15,8 +15,10 @@
     margin-top: 10px;
     .article-contents__header {
       display: flex;
+      align-items: center;
       .article-contents__header__title {
         font-weight: bold;
+        font-size: 1.15rem;
         width: 75%;
       }
       .article-contents__header__date {
@@ -29,6 +31,7 @@
 
     .article-contents__description {
       color: var(--text-sub);
+      margin-top: 0.35rem;
     }
   }
 }

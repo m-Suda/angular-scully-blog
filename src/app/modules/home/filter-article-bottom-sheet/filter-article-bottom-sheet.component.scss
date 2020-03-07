@@ -1,0 +1,23 @@
+.mat-bottom-sheet-container {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.filter-article {
+  padding: 28.5vh 30% 0;
+  .filter-article__form {
+    mat-form-field {
+      width: 100%;
+    }
+  }
+
+  .filter-article__categories {
+    margin-top: 5vh;
+    width: 100%;
+  }
+
+  .filter-article__close {
+    margin-top: 15vh;
+    text-align: right;
+  }
+}

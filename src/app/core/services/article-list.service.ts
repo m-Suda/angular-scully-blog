@@ -10,26 +10,39 @@ import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends'
 export class ArticleListService {
     private readonly articleList = new BehaviorSubject<ScullyRouteExtendsType[]>([]);
     private readonly _articleList$ = this.articleList.asObservable();
-    private _categories: string[] = [];
+    private _allArticleList: ScullyRouteExtendsType[] = [];
+    public categories: string[] = [];
 
     constructor(private scully: ScullyRoutesService) {
-        this._articleList$ = this.scully.available$.pipe(
-            map(articles => this.filterOnlyArticlesToDisplay(articles)),
-            tap<ScullyRouteExtendsType[]>(articles => {
-                this.articleList.next(articles);
-                // @ts-ignore flat()で型エラーが起きる
-                const categories = articles.map(({ category }) => category).flat();
-                this._categories = [...new Set<string>(categories)];
-            })
-        );
+        this.scully.available$
+            .pipe(
+                map(articles => this.filterOnlyArticlesToDisplay(articles)),
+                tap<ScullyRouteExtendsType[]>(articles => {
+                    this._allArticleList = articles;
+                    this.articleList.next(articles);
+                    // @ts-ignore flat()で型エラーが起きる
+                    const categories = articles.map(({ category }) => category).flat();
+                    this.categories = [...new Set<string>(categories)];
+                })
+            )
+            .toPromise()
+            .then();
     }
 
     public get articleList$() {
         return this._articleList$;
     }
 
-    public get categories() {
-        return this._categories;
+    public filter(selectedCategory: string[]) {
+        if (!selectedCategory.length) {
+            this.articleList.next(this._allArticleList);
+            return;
+        }
+
+        const filteredArticles = this._allArticleList.filter(({ category }) => {
+            return category.filter(c => selectedCategory.includes(c)).length;
+        });
+        this.articleList.next(filteredArticles);
     }
 
     /**

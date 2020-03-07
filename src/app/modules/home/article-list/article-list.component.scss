@@ -2,4 +2,12 @@
 
 :host {
   @include list-base();
+
+  // 最終行のコンテンツが3つ未満の時真ん中が空いてしまうため。
+  &::after {
+    content: '';
+    display: block;
+    width: 31%;
+    height: 0;
+  }
 }
