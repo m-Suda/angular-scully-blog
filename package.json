@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "test:watch": "jest --watch",
     "scully": "scully",
-    "scully:serve": "ng build && scully && scully serve"
+    "scully:serve": "ng build && scully && scully serve",
+    "scully:deploy": "ng build --prod && scully && firebase deploy"
   },
   "private": true,
   "dependencies": {
