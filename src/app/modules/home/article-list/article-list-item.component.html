@@ -1,13 +1,6 @@
-<div class="article-contents">
-    <div class="article-contents__header">
-        <div class="article-contents__header__title">
-            {{article.title}}
-        </div>
-        <div class="article-contents__header__date">
-            {{article.date | date:'yyyy-MM-dd'}}
-        </div>
-    </div>
-    <div class="article-contents__description">
-        {{article.description}}
-    </div>
+<div class="article-contents__date">
+    {{article.date | date:'yyyy-MM-dd'}}
+</div>
+<div class="article-contents__title">
+    {{article.title}}
 </div>

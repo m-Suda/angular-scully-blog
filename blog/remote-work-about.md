@@ -1,9 +1,7 @@
 ---
 title: はじめてのリモートワーク
-description: 初めてのリモートワークの感想をつらつらと。
 publish: true
 category: [work, remote-work]
-thumbnail: /assets/cape.png
 date: 2020-03-06
 ---
 
