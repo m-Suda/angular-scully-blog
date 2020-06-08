@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends';
+import { ScullyRouteExtendsType } from '../../types/scully-route-extends';
 
 @Injectable({
     providedIn: 'root',

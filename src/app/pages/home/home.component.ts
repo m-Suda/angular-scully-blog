@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
-import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends';
+import { ScullyRouteExtendsType } from '../../types/scully-route-extends';
 import { ArticleListService } from '../../core/services/article-list.service';
 import { ArticleItemService } from '../../core/services/article-item.service';
 import { FilterArticleBottomSheetComponent } from './filter-article-bottom-sheet/filter-article-bottom-sheet.component';

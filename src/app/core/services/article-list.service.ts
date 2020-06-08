@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { map, tap } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
-import { ScullyRouteExtendsType } from '../../shared/types/scully-route-extends';
+import { ScullyRouteExtendsType } from '../../types/scully-route-extends';
 
 @Injectable({
     providedIn: 'root',
