@@ -1,0 +1,10 @@
+:host {
+  display: block;
+
+  .left-arrow-button {
+    padding: 0;
+    .left-arrow-button__icon {
+      margin-bottom: 3px;
+    }
+  }
+}

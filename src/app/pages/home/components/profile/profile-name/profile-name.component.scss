@@ -1,5 +1,11 @@
+@import "responsive";
+
 :host {
   display: block;
   font-weight: bold;
   font-size: 1.5rem;
+  @include sm {
+    text-align: center;
+    font-size: 1.25rem;
+  }
 }

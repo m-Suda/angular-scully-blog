@@ -1,3 +1,5 @@
+@import "responsive";
+
 :host {
   display: block;
 
@@ -6,5 +8,8 @@
     border-radius: 50%;
     width: 9.25rem;
     height: auto;
+    @include sm {
+      width: 6rem;
+    }
   }
 }

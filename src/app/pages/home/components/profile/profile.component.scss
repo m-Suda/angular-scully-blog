@@ -1,12 +1,25 @@
+@import "responsive";
+
 :host {
   display: flex;
   align-items: center;
+
+  @include sm {
+    flex-direction: column;
+  }
 
   .profile-icon {}
 
   .profile {
     margin-left: 5rem;
-    .profile__name {}
+    @include sm {
+      margin-left: 0;
+    }
+    .profile__name {
+      @include sm {
+        margin-top: 0.8rem;
+      }
+    }
     .profile__sns {
       margin-top: 1rem;
     }

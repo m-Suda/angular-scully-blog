@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { ArticleItemService } from '../../core/services/article-item.service';
 
 @Component({
@@ -9,7 +10,12 @@ import { ArticleItemService } from '../../core/services/article-item.service';
     encapsulation: ViewEncapsulation.Emulated,
 })
 export class BlogComponent {
+    public iconColor = '#FFFFFF';
     public article = this.articleItem.article;
 
-    constructor(private articleItem: ArticleItemService) {}
+    constructor(private articleItem: ArticleItemService, private router: Router) {}
+
+    public returnToHome() {
+        this.router.navigate(['/']).then();
+    }
 }

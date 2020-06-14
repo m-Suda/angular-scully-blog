@@ -1,6 +1,12 @@
-<header class="blog-header">
-    <mat-toolbar></mat-toolbar>
-</header>
+<app-header class="blog-header">
+    <app-left-arrow-icon-button class="blog-header__back-button"
+                                headerLeft
+                                [iconColor]="iconColor"
+                                (onClick)="returnToHome()"></app-left-arrow-icon-button>
+</app-header>
+
+<app-left-arrow-button class="blog-back-button"
+                       (onClick)="returnToHome()">Back</app-left-arrow-button>
 
 <main class="blog-main">
 
@@ -9,7 +15,7 @@
         <div class="blog-main__heading__category">{{article?.category | arrayJoin:' / '}}</div>
     </div>
     <!-- This is where Scully will inject the static HTML -->
-    <div class="blog-main__article">
+    <article class="blog-main__article">
         <scully-content></scully-content>
-    </div>
+    </article>
 </main>
