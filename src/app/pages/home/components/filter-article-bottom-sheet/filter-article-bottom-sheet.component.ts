@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { ArticleListService } from '../../../../core/services/article-list.service';
 
@@ -8,14 +8,19 @@ import { ArticleListService } from '../../../../core/services/article-list.servi
     styleUrls: ['./filter-article-bottom-sheet.component.scss'],
     encapsulation: ViewEncapsulation.None,
 })
-export class FilterArticleBottomSheetComponent {
-    public categories = this.articleList.categories;
-    public selectedCategories: string[] = [];
+export class FilterArticleBottomSheetComponent implements OnInit {
+    public categories: string[];
+    public selectedCategories: string[];
 
     constructor(
         private _bottomSheetRef: MatBottomSheetRef<FilterArticleBottomSheetComponent>,
         private articleList: ArticleListService
     ) {}
+
+    ngOnInit(): void {
+        this.categories = this.articleList.categories;
+        this.selectedCategories = [];
+    }
 
     public addCategoryToFilter(selectedCategory: string) {
         const newSelectedCategories = [...this.selectedCategories, selectedCategory];

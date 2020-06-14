@@ -13,6 +13,8 @@ import { SearchButtonModule } from '../shared/components/search-button/search-bu
 import { SnsLinksComponent } from './components/profile/sns-links/sns-links.component';
 import { ProfileIconComponent } from './components/profile/profile-icon/profile-icon.component';
 import { ProfileNameComponent } from './components/profile/profile-name/profile-name.component';
+import { SelectCategoryInputComponent } from './components/filter-article-bottom-sheet/select-category-input/select-category-input.component';
+import { SelectCategoryListComponent } from './components/filter-article-bottom-sheet/select-category-list/select-category-list.component';
 
 @NgModule({
     declarations: [
@@ -24,6 +26,8 @@ import { ProfileNameComponent } from './components/profile/profile-name/profile-
         SnsLinksComponent,
         ProfileIconComponent,
         ProfileNameComponent,
+        SelectCategoryInputComponent,
+        SelectCategoryListComponent,
     ],
     imports: [CommonModule, HomeRoutingModule, MaterialModule, HeaderModule, SearchButtonModule],
 })
