@@ -1,19 +1,17 @@
 .mat-bottom-sheet-container {
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
 }
 
-:host {
-  display: block;
+.filter-article-form {}
 
-  .filter-article-form {}
+.filter-article-categories {
+  margin-top: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
-  .filter-article-categories {
-    width: 100%;
-  }
-
-  .filter-article-buttons {
-    margin-top: 15vh;
-    text-align: right;
-  }
+.filter-article-buttons {
+  margin-top: 4vh;
+  text-align: right;
 }
