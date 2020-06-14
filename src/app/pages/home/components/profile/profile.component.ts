@@ -6,8 +6,22 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-    public name = 'Suda';
-    public selfIntroduction = 'JavaScript / TypeScript / Node.js/ Angular';
+    public profileIcon = '/assets/profile.png';
+    public name = 'masaks';
+    public snsIcons = [
+        {
+            imageUrl: '/assets/Twitter.png',
+            siteUrl: '',
+        },
+        {
+            imageUrl: '/assets/GitHub.png',
+            siteUrl: '',
+        },
+        {
+            imageUrl: '/assets/Qiita.png',
+            siteUrl: '',
+        },
+    ];
 
     constructor() {}
 

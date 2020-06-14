@@ -1,10 +1,10 @@
-<app-header>
+<app-header class="home-header">
     <app-search-button headerRight></app-search-button>
 </app-header>
 
 <main class="home-main">
 
-    <app-profile></app-profile>
+    <app-profile class="home-main__profile"></app-profile>
 
     <app-article-list>
         <app-article-list-item *ngFor="let article of links$ | async"

@@ -1,9 +1,13 @@
-.home-header {
-  .home-header_fill-remaining-space {
-    flex: 1 1 auto;
-  }
-}
+:host {
+  display: block;
 
-.home-main {
-  padding: 0 20%;
+  .home-header {}
+
+  .home-main {
+    padding: 0 20%;
+
+    .home-main__profile {
+      padding: 4rem 0 3rem;
+    }
+  }
 }

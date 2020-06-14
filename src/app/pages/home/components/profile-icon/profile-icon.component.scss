@@ -1,0 +1,10 @@
+:host {
+  display: block;
+
+  .profile-icon-image {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 9.25rem;
+    height: auto;
+  }
+}
