@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
-    { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+    { path: '', component: HomeComponent },
     {
         path: 'blog',
         loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule),
@@ -10,7 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, { useHash: true })],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}
