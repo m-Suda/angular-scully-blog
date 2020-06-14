@@ -1,6 +1,10 @@
 :host {
   display: block;
 
+  mat-toolbar.mat-toolbar {
+    background-color: #4A4A4A;
+  }
+
   .fill-remaining-space {
     flex: 1 1 auto;
   }
