@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-article-list',
-    template: `
-        <ng-content></ng-content>
-    `,
+    templateUrl: './article-list.component.html',
     styleUrls: ['./article-list.component.scss'],
 })
 export class ArticleListComponent implements OnInit {

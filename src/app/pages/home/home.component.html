@@ -1,15 +1,16 @@
 <app-header class="home-header">
-    <app-search-button headerRight></app-search-button>
+    <app-search-button headerRight (onClick)="openSearchArticle()"></app-search-button>
 </app-header>
 
 <main class="home-main">
 
     <app-profile class="home-main__profile"></app-profile>
 
-    <app-article-list>
-        <app-article-list-item *ngFor="let article of links$ | async"
+    <app-article-list class="home-main__article-list">
+        <app-article-list-item class="home-main__article-list__item"
+                               *ngFor="let article of links$ | async"
                                [article]="article"
-                                (click)="openArticle(article)">
+                               (click)="openArticle(article)">
         </app-article-list-item>
     </app-article-list>
 

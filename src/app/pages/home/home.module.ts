@@ -10,9 +10,9 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FilterArticleBottomSheetComponent } from './components/filter-article-bottom-sheet/filter-article-bottom-sheet.component';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { SearchButtonModule } from '../shared/components/search-button/search-button.module';
-import { SnsLinksComponent } from './components/sns-links/sns-links.component';
-import { ProfileIconComponent } from './components/profile-icon/profile-icon.component';
-import { ProfileNameComponent } from './components/profile-name/profile-name.component';
+import { SnsLinksComponent } from './components/profile/sns-links/sns-links.component';
+import { ProfileIconComponent } from './components/profile/profile-icon/profile-icon.component';
+import { ProfileNameComponent } from './components/profile/profile-name/profile-name.component';
 
 @NgModule({
     declarations: [
