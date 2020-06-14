@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
-import { ArticleListService } from '../../../core/services/article-list.service';
+import { ArticleListService } from '../../../../core/services/article-list.service';
 
 @Component({
     selector: 'app-search-article-bottom-sheet',

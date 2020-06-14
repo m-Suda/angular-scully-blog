@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ScullyRouteExtendsType } from '../../../types/scully-route-extends';
+import { ScullyRouteExtendsType } from '../../../../types/scully-route-extends';
 
 @Component({
     selector: 'app-article-list-item',
