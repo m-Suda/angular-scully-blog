@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'app-search-button',
@@ -6,6 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
     styleUrls: ['./search-button.component.scss'],
 })
 export class SearchButtonComponent implements OnInit {
+    @Input() iconColor = '#4A4A4A';
     @Output() onClick = new EventEmitter<void>();
 
     constructor() {}

@@ -13,7 +13,8 @@ import { FilterArticleBottomSheetComponent } from './components/filter-article-b
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-    links$: Observable<ScullyRouteExtendsType[]> = this.articleList.articleList$;
+    public iconColor = '#FFFFFF';
+    public links$: Observable<ScullyRouteExtendsType[]> = this.articleList.articleList$;
 
     constructor(
         private articleList: ArticleListService,

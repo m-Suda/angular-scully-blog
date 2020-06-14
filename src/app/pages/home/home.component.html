@@ -1,5 +1,7 @@
 <app-header class="home-header">
-    <app-search-button headerRight (onClick)="openSearchArticle()"></app-search-button>
+    <app-search-button headerRight
+                       [iconColor]="iconColor"
+                       (onClick)="openSearchArticle()"></app-search-button>
 </app-header>
 
 <main class="home-main">
